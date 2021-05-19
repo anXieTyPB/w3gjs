@@ -28,13 +28,13 @@ export const reduceHeroes = (heroCollector: {
     }, [] as Omit<HeroInfo, "order">[]);
 };
 
-interface Ability {
+export interface Ability {
   type: "ability";
   time: number;
   value: string;
 }
 
-interface Retraining {
+export interface Retraining {
   type: "retraining";
   time: number;
 }
@@ -67,6 +67,7 @@ class Player {
     summary: { [key: string]: number };
     order: { id: string; ms: number }[];
   };
+
   buildings: {
     summary: { [key: string]: number };
     order: { id: string; ms: number }[];
